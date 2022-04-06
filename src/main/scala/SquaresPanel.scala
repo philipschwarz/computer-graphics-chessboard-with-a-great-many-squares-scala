@@ -53,13 +53,11 @@ object SquaresPanel extends JPanel:
 
     def squareCentre(row: Int, col: Int): Point =
       Point(panelCentre.x - (gridSize / 2 * squareSide) + (col * squareSide) + squareSide / 2,
-        panelCentre.y - (gridSize / 2 * squareSide) + (row * squareSide) + squareSide / 2)
+            panelCentre.y - (gridSize / 2 * squareSide) + (row * squareSide) + squareSide / 2)
 
     for
-      (row, startDirection) <-
-        (0 until gridSize) zip alternatingDirections(Direction.Right)
-      (col, direction) <-
-        (0 until gridSize) zip alternatingDirections(startDirection)
+      (row, startDirection) <- (0 until gridSize) zip alternatingDirections(Direction.Right)
+      (col, direction) <- (0 until gridSize) zip alternatingDirections(startDirection)
       square = Square(squareCentre(row,col), squareSide)
     yield LazyList
             .iterate(square)(shrinkAndTwist(direction))
