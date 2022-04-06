@@ -1,0 +1,2 @@
+Scala code for [Computer Graphics in Java and Scala - Part 1b](https://www.slideshare.net/pjschwarz/computer-graphics-in-java-and-scala-part-1b)
+![Computer Graphics in Java and Scala - Part 1b](front-slide.png?raw=true )
